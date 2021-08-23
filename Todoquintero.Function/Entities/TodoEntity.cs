@@ -11,5 +11,6 @@ namespace Todoquintero.Function.Entities
         public string TaskDescription { get; set; }
 
         public bool Iscompleted { get; set; }
+        public bool IsCompleted { get; set; }
     }
 }
