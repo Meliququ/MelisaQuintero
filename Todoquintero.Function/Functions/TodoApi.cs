@@ -14,7 +14,7 @@ using Todoquintero.Function.Entities;
 
 namespace Todoquintero.Function.Functions
 {
-    public static class TodoApi
+    public class TodoApi
     {
         [FunctionName(nameof(CreateTodo))]
         public static async Task<IActionResult> CreateTodo(
