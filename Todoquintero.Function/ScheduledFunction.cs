@@ -15,9 +15,9 @@ namespace Todoquintero.Function
            [Table("todo", Connection = "AzureWebJobsStorage")] CloudTable todoTable,
             ILogger log)
         {
-         log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
+         log.LogInformation($"Deleting completed function executed at: {DateTime.Now}");
 
-            string filter = TableQuery.GenerateFilterConditionForBool("IsCompleted", QueryComparisons.Equal, true);
+            string filter = TableQuery.GenerateFilterConditionForBool("Iscompleted", QueryComparisons.Equal, true);
             TableQuery<TodoEntity> query = new TableQuery<TodoEntity>().Where(filter);
             TableQuerySegment<TodoEntity> completedTodos = await todoTable.ExecuteQuerySegmentedAsync(query, null);
             int deleted = 0;

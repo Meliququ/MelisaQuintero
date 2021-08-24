@@ -12,6 +12,8 @@ namespace Todoquintero.Test.Helpers
         }
         public IList<string> logs;
 
+        public object Logs { get; internal set; }
+
         public IDisposable BeginScope<TState>(TState state)
         {
             return NullScope.Instance;
